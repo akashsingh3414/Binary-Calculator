@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <div id="outer">
+        <div id="selectOption">
+            <div>
+                <input type="radio" name="display_type" id="binary">
+                <label for="binary">Display in Binary only</label>
+            </div>
+            
+            <div>
+                <input type="radio" name="display_type" id="bin_dec">
+                <label for="bin_dec">Display in Binary and Decimal</label>
+            </div>
+        </div>
+        
+        <div id="keyboard">
+            <div class="line_buttons">
+                <div id="zero_one">
+                    <input type="submit" id="zero" value="0">
+                    <input type="submit" id="one" value="1">
+                </div>
+                <div><input type="submit" id="solve" value="="></div>
+                <div><input type="submit" id="res" value="reset"></div>
+                <div><input type="submit" id="prev" value="<< Previos Operation"></div>
+            </div>
+            <div class="line_buttons">
+                <div><input type="submit" id="logicalAnd" value="Logical AND"></div>
+                <div><input type="submit" id="logicalOr" value="Logical OR"></div>
+                <div><input type="submit" id="logicalNot" value="Logical NOT"></div>
+                <div><input type="submit" id="next" value="Next Operation >>"></div>
+            </div>
+            <div class="line_buttons">
+                <div><input type="submit" id="bitwiseAnd" value="Bitwise AND"></div>
+                <div><input type="submit" id="bitwiseOr" value="Bitwise OR"></div>
+                <div><input type="submit" id="bitwiseXor" value="Bitwise XOR"></div>
+                <div><input type="submit" id="bitwiseNot" value="Bitwise NOT"></div>
+            </div>
+            <div class="line_buttons">
+                <div><input type="submit" id="right" value="Right Shift"></div>
+                <div><input type="submit" id="left" value="Left Shift"></div>
+                <div id="urightButton"><input type="submit" id="uright" value="Unsigned Right Shift"></div>
+            </div>
+        </div>
+    </div>
+
+<style>
+#keyboard{
+    display: grid;
+}
+
+#keyboard div input[type=submit]{
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+#keyboard div div{
+    margin: 10px;
+}
+#zero_one{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    width: 250px;
+}
+
+#zero_one input[type=submit]{
+    width: 40%;
+}
+.line_buttons{
+    display: flex;
+}
+
+#urightButton{
+    width: 500px;
+}
+
+#urightButton input[type=submit]{
+    width: 500px;
+}
+
+#selectOption{
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+}
+
+#input{
+    background-color: rgb(172, 228, 209);
+    width: 1050px;
+    height: 30px;
+    margin: 5px;
+    font-size: 22px;
+    font-family:'Courier New', Courier, monospace;
+    border-radius: 10px;
+}
+
+input[type="submit"]{
+    background-color:rgb(207, 205, 205);
+}
+
+input[type="submit"]:active{
+    background-color: black;
+    color: white;
+}
+</style>
+<script src="app.js"></script>
+</body>
+</html>
